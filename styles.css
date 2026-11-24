@@ -16,15 +16,15 @@ button { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid #737373; outline-offset: 5px; }
 .wrap { width: min(1120px, calc(100% - 96px)); margin-inline: auto; }
-.site-head { background: var(--night); color: #ffffff; border-bottom: 1px solid #333333; }
+.site-head { background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; padding-block: 1.1rem; gap: 1rem; }
-.head-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: .7rem 2rem; padding-block: 1.4rem; }
-.site-name { grid-column: 2; margin: 0; text-align: center; font-size: clamp(2.4rem, 4.5vw, 3.8rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.1; }
+.head-inner { display: flex; flex-direction: column; align-items: center; gap: .25rem; padding-block: 1.4rem 1.2rem; text-align: center; }
+.site-name { margin: 0; text-align: center; font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.1; }
 nav { display: flex; gap: 1.5rem; align-items: center; }
-.social-nav { grid-column: 3; justify-self: end; }
+.social-nav { justify-content: center; flex-wrap: wrap; column-gap: 1.5rem; row-gap: 0; }
 nav a, footer a { text-decoration: none; font-size: .95rem; min-height: 44px; display: inline-flex; align-items: center; }
 nav a:hover, footer a:hover { text-decoration: underline; text-underline-offset: .25em; }
-.header-intro { grid-column: 1 / -1; max-width: 44rem; justify-self: center; text-align: center; color: #cccccc; font-size: 1rem; margin: 0; line-height: 1.6; }
+.header-intro { max-width: 44rem; text-align: center; color: var(--ink); font-size: 1rem; margin: 0; line-height: 1.6; }
 .eyebrow { color: var(--highlight); font: 700 .875rem/1.4 var(--font); letter-spacing: .015em; margin: 0 0 1.15rem; }
 h2, h3 { margin: 0; line-height: 1.1; letter-spacing: -.04em; }
 .primary { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background: var(--highlight); color: var(--night); font-weight: 750; border-radius: .38rem; padding: .72rem 1.1rem; min-height: 46px; }
@@ -88,15 +88,12 @@ footer { background: var(--night); color: #dddddd; font-size: .9rem; }
 .project-links a { text-underline-offset: .2em; }
 @media (max-width: 850px) {
   .wrap { width: calc(100% - 56px); }
-  .head-inner { column-gap: 1rem; }
   .grid { gap: .8rem; }
   .card-body { padding: 1rem; }
 }
 @media (max-width: 670px) {
   .wrap { width: calc(100% - 36px); }
-  .head-inner { grid-template-columns: 1fr 1fr; row-gap: .4rem; padding-block: 1rem; }
-  .site-name { grid-column: 1 / -1; grid-row: 1; }
-  .social-nav { grid-row: 2; grid-column: 1 / -1; justify-self: center; }
+  .head-inner { padding-block: 1.2rem 1rem; }
   .header-intro { margin-top: .2rem; font-size: .9rem; }
   .about-inner { grid-template-columns: 1fr; }
   nav { gap: 1rem; }
